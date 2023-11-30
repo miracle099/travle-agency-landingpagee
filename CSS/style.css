@@ -235,6 +235,84 @@
   font-size: 1.1rem;
   font-family: sans-serif;
 }
+.hero .hero-text .button .play {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.hero .hero-text .button .play .hover {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgb(255, 79, 79);
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+}
+.hero .hero-text .button .play .hover img {
+  padding: 8px 8px;
+}
+.hero .hero-text .button .play .hover::before {
+  content: "";
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: red;
+  margin-top: -0.8rem;
+  margin-left: -1rem;
+  border-radius: 50%;
+  -webkit-animation-name: ball;
+          animation-name: ball;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  z-index: -1;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  position: absolute;
+}
+@-webkit-keyframes ball {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes ball {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.hero .hero-text .button .play a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
 .hero .hero-image {
   width: 50%;
   height: auto;
@@ -907,6 +985,11 @@
           align-items: center;
   text-align: center;
   color: rgb(159, 157, 157);
+}
+@media screen and (max-width: 767px) {
+  .copyright {
+    margin-bottom: 10rem;
+  }
 }
 .copyright .text p {
   text-align: center;
